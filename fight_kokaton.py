@@ -17,7 +17,7 @@ class Score:
         self.font = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)  # フォントの設定
         self.color = (0, 0, 255)  # 青色
         self.score = 0  # スコア初期値
-        self.img = self.font.render(f"スコア: {self.score}", 0, self.color)  # 初期スコアの画像
+        self.img = self.font.render(f"スコア: {self.score}", 0, self.color)  # 初期スコアの画面表示
         self.rct = self.img.get_rect()
         self.rct.bottomleft = (100, HEIGHT-50)  # スコア表示位置（左下隅）
 
@@ -26,7 +26,7 @@ class Score:
         スコアを更新して画面に描画
         引数 screen: 描画先の画面Surface
         """
-        self.img = self.font.render(f"スコア: {self.score}", 0, self.color)  # 更新後のスコアを画像に
+        self.img = self.font.render(f"スコア: {self.score}", 0, self.color)  # 更新後のスコア画面に
         screen.blit(self.img, self.rct)  # スコアを画面に描画
 
     def add_score(self, points: int):
